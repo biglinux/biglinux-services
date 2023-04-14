@@ -1,0 +1,22 @@
+#!/bin/bash
+#desligar service
+
+SERVICE=httpd.service
+start=$(LANG=C systemctl status $SERVICE | grep Active: | awk '{print $2}')
+enable=$(LANG=C systemctl status $SERVICE | grep Loaded: | awk '{print $4}' | sed 's/;//')
+
+if [ "$1" = "start" ];then
+    if [ "$start" =  "active" ]; then
+        pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY systemctl stop $SERVICE
+    elif [ "$start" =  "inactive" ]; then
+        pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY systemctl start $SERVICE
+    fi
+elif [ "$1" = "enable" ];then
+    if [ "$enable" =  "enabled" ]; then
+        pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY systemctl disable $SERVICE
+    elif [ "$enable" =  "disabled" ]; then
+        pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY systemctl enable $SERVICE
+    fi
+fi
+
+xdotool key F5

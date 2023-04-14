@@ -1,0 +1,186 @@
+#!/bin/bash
+
+#Translation
+#export TEXTDOMAINDIR="/usr/share/locale"
+#export TEXTDOMAIN=biglinux-services
+
+# Don't group windows
+xprop -id "$(xprop -root '\t$0' _NET_ACTIVE_WINDOW | cut -f 2)" -f WM_CLASS 8s -set WM_CLASS "$$"
+
+Title=$"BigLinux Services"
+subTitleText=$"Ativar e Desativar Serviços"
+Service=$"Serviço:"
+Activate=$"Ativar"
+Disable=$"Desativar"
+windowsBarTitle=$"Titulo Janela"
+section=$"Sessão"
+help_Text=$"Texto esplicativo"
+Need_Help=$"Precisa de ajuda?"
+CLOSE=$"Fechar"
+OPEN=$"Abrir"
+Ativado_text=$"Ativado"
+Desativado_text=$"Desativado"
+
+cat << EOF
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet'><link rel="stylesheet" href="./style.css">
+</head>
+EOF
+
+# Get body tag with color light or not
+/usr/share/bigbashview/bcc/shell/getbgcolor.sh
+
+cat << EOF
+<body>
+<div class="dark-light">
+  <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+  </svg>
+</div>
+<div class="principal">
+  <div class="wrap">
+    <div class="user">
+      <div id="toggle-wrap">
+        <div id="toggle-terms">
+          <div id="cross">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+  <div class="logo">
+    <a href="#"><img src="icons/logo-big-trans-branco.png" alt="" class="logo-biglinux"></a>
+  </div>
+
+  <div class="user">
+    <div class="form-wrap">
+      <div id="list-tab-content" class="fc-card active">
+        <div id="desc">
+          <h2>$Title</h2>
+          <div id="list-tab-content" class="fc-card active">
+            <div class="centretext">
+              <div id="desc">
+              <h3>$subTitleText</h3>
+              </div>
+            </div>
+          </div>
+
+    
+      <div id="desc">
+        <ul id="menu">
+          <li>
+      </div>
+          </li>
+        </ul>
+    </div>
+      <div class="content-section-title">Boot  |  Start</div>
+EOF
+
+lista_service=$(grep "() {" index.sh.htm | awk '{print $1}' | sed '/lista_service=/d')
+
+
+### Inicio Editavel ###
+### Inicio Editavel ###
+### Inicio Editavel ###
+
+apache () {
+service_name="Apache"
+SERVICE="httpd"
+}
+
+ngnix () {
+service_name="Ngnix"
+SERVICE="ngnix"
+}
+
+mysql () {
+service_name="MySQL"
+SERVICE="mysql"
+}
+
+php () {
+service_name="PHP"
+SERVICE="php8"
+}
+
+docker () {
+service_name="Docker"
+SERVICE="docker"
+}
+
+ssh () {
+service_name="SSH"
+SERVICE="sshd"
+}
+
+### Fim Editavel ###
+### Fim Editavel ###
+### Fim Editavel ###
+
+for i in ${lista_service[@]}; do $i;
+if [ -n "$(systemctl status $SERVICE | grep "Loaded:")" ];then
+	start=$(LANG=C systemctl status $SERVICE | grep Active: | awk '{print $2}')
+	if [ "$start" =  "active" ]; then
+	    checked_start="checked"
+    else
+      checked_start=
+    fi
+    
+	enable=$(LANG=C systemctl status $SERVICE | grep Loaded: | awk '{print $4}' | sed 's/;//')
+	if [ "$enable" =  "enabled" ]; then
+	    checked_enable="checked"
+    else 
+	    checked_enable=
+    fi
+
+cat << EOF
+                  <div class="content-section" style="margin-top: 0px;">    
+                  <ul style="margin-top: 0px;">
+                  <li>
+                  <div class="products">
+                  $service_name
+                  </div>
+EOF
+  if [ "$checked_start" = "checked" ]; then
+cat << EOF
+                  <span class="status"><span class="status-circle green"></span>$Ativado_text</span>
+                  <div class="button-wrapper">
+                    <input id="n0" onclick="_run('./${SERVICE}.run enable')" type="checkbox" class="switch" style="top: 3px;" $checked_enable>
+                    <input id="n0" onclick="_run('./${SERVICE}.run start')" type="checkbox" class="switch" style="top: 3px;" $checked_start>
+                  </div>
+                  </div>
+                  </li>
+EOF
+  else
+cat << EOF
+                  <span class="status"><span class="status-circle gray"></span>$Desativado_text</span>
+                  <div class="button-wrapper">
+                    <input id="n0" onclick="_run('./${SERVICE}.run enable')" type="checkbox" class="switch" style="top: 3px;" $checked_enable>
+                    <input id="n0" onclick="_run('./${SERVICE}.run start')" type="checkbox" class="switch" style="top: 3px;" $checked_start>
+                  </div>
+                  </div>
+                  </li>
+EOF
+  fi
+fi
+done
+
+### End ###
+cat << EOF
+        </div>
+      </div>       
+    </div>
+  </div>
+</div>
+
+<!-- partial -->
+<script src='/usr/share/bigbashview/bcc/materialize/js/jquery.js'></script><script  src="./script.js"></script>
+EOF
+cat << EOF
+</body>
+</html>
+EOF
