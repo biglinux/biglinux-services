@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the biglinux-services package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: biglinux-services\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: attranslate\n"
+
+msgid "BigLinux Services"
+msgstr "BigLinux-palvelut"
+
+msgid "Ativar e Desativar Serviços"
+msgstr "Ota palvelut käyttöön ja poista ne käytöstä"
+
+msgid "Serviço:"
+msgstr "Palvelu:"
+
+msgid "Ativar"
+msgstr "Aktivoida"
+
+msgid "Desativar"
+msgstr "Poistaa käytöstä"
+
+msgid "Titulo Janela"
+msgstr "Ikkunan otsikko"
+
+msgid "Sessão"
+msgstr "Istunto"
+
+msgid "Texto esplicativo"
+msgstr "Yhdistävä teksti"
+
+msgid "Precisa de ajuda?"
+msgstr "Tarvitsetko apua?"
+
+msgid "Fechar"
+msgstr "Sulkea"
+
+msgid "Abrir"
+msgstr "Avata"
+
+msgid "Ativado"
+msgstr "Aktivoitu"
+
+msgid "Desativado"
+msgstr "Poistettu käytöstä"

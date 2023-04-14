@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the biglinux-services package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: biglinux-services\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: attranslate\n"
+
+msgid "BigLinux Services"
+msgstr "Služby pre BigLinux"
+
+msgid "Ativar e Desativar Serviços"
+msgstr "Zapnutie a vypnutie služieb"
+
+msgid "Serviço:"
+msgstr "Služba:"
+
+msgid "Ativar"
+msgstr "Aktivovať"
+
+msgid "Desativar"
+msgstr "Vypnúť"
+
+msgid "Titulo Janela"
+msgstr "Názov okna"
+
+msgid "Sessão"
+msgstr "Relácia"
+
+msgid "Texto esplicativo"
+msgstr "Spojovací text"
+
+msgid "Precisa de ajuda?"
+msgstr "Potrebujete poradiť?"
+
+msgid "Fechar"
+msgstr "Zavrieť"
+
+msgid "Abrir"
+msgstr "Otvorený"
+
+msgid "Ativado"
+msgstr "Aktivovaný"
+
+msgid "Desativado"
+msgstr "Deaktivovaný"

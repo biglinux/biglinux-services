@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the biglinux-services package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: biglinux-services\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: attranslate\n"
+
+msgid "BigLinux Services"
+msgstr "BigLinux 서비스"
+
+msgid "Ativar e Desativar Serviços"
+msgstr "서비스 사용 및 사용 안 함"
+
+msgid "Serviço:"
+msgstr "서비스:"
+
+msgid "Ativar"
+msgstr "활성화"
+
+msgid "Desativar"
+msgstr "비활성화"
+
+msgid "Titulo Janela"
+msgstr "창 제목"
+
+msgid "Sessão"
+msgstr "세션"
+
+msgid "Texto esplicativo"
+msgstr "복잡한 텍스트"
+
+msgid "Precisa de ajuda?"
+msgstr "도움이 필요하신가요?"
+
+msgid "Fechar"
+msgstr "닫다"
+
+msgid "Abrir"
+msgstr "열다"
+
+msgid "Ativado"
+msgstr "활성화"
+
+msgid "Desativado"
+msgstr "비활성화"

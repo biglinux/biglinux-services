@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the biglinux-services package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: biglinux-services\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: attranslate\n"
+
+msgid "BigLinux Services"
+msgstr "BigLinux Diensten"
+
+msgid "Ativar e Desativar Serviços"
+msgstr "Services in- en uitschakelen"
+
+msgid "Serviço:"
+msgstr "Dienst:"
+
+msgid "Ativar"
+msgstr "Activeren"
+
+msgid "Desativar"
+msgstr "Uitschakelen"
+
+msgid "Titulo Janela"
+msgstr "Titel van venster"
+
+msgid "Sessão"
+msgstr "Sessie"
+
+msgid "Texto esplicativo"
+msgstr "Splicatieve tekst"
+
+msgid "Precisa de ajuda?"
+msgstr "Hulp nodig?"
+
+msgid "Fechar"
+msgstr "Sluiten"
+
+msgid "Abrir"
+msgstr "Openen"
+
+msgid "Ativado"
+msgstr "Geactiveerd"
+
+msgid "Desativado"
+msgstr "Gedeactiveerd"
