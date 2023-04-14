@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=BigLinux Services
 Exec=biglinux-services
-Icon=/usr/share/bigbashview/bcc/apps/biglinux-services/icons/logo.png
+Icon=/usr/share/bigbashview/bcc/apps/biglinux-services/icons/logo.svg
 Terminal=false
 Categories=System;
 Type=Application
