@@ -6,4 +6,4 @@ export TEXTDOMAIN=biglinux-services
 
 cd /usr/share/bigbashview/bcc/apps/biglinux-services/
 
-bigbashview -s 500x660 index.sh.htm -n $"BigLinux Services" -i "logo.svg"
+bigbashview -s 500x660 index.sh.htm -n $"BigLinux Services" -i "icons/logo.png"
